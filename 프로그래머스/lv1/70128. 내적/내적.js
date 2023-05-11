@@ -7,7 +7,11 @@ function innerProduct(n1,n2){
 }
 
 function solution(a, b) {
-    const answer = innerProduct(a,b);
+    // const answer = innerProduct(a,b);
+    const answer = a.reduce((acc,cur,idx)=>{
+        acc += cur*b[idx];
+        return acc
+    },0)
     
     return answer;
 }
