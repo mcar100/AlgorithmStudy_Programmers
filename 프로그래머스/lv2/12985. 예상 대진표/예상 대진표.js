@@ -1,11 +1,6 @@
 // n: 대회 참여 인원
 // a, b: 특정 번호 참가자 -> 둘이 몇 번째 라운드에서 만나는가?
 
-// 8명일 경우 총 몇 라운드로 진행되는가?
-// 2^3 승이므로 3번
-// n명일 경우 총 몇 라운드를 하는가?
-// n.length-1 라운드
-
 /* 4번과 7번은 몇 번째 라운드에서 만나는가?
    3,4 -> 1,4 
    7,8 -> 5,7 -> 4,7
@@ -15,9 +10,8 @@
 function solution(n,a,b)
 {
     let answer = 0;
-    const numberOfMatches = n.toString(2).length - 1 ;
-    let groupOfA = Math.ceil(a/2); //5그룹 -> 3그룹 -> 2그룹
-    let groupOfB = Math.ceil(b/2); //8그룹 -> 4그룹 -> 2그룹 -> 1그룹
+    let groupOfA = Math.ceil(a/2); // 5번째 그룹일 경우: 5그룹 -> 3그룹 -> 2그룹
+    let groupOfB = Math.ceil(b/2); // 8번째 그룹일 경우: 8그룹 -> 4그룹 -> 2그룹
     
     while(groupOfA !== groupOfB){
         
@@ -33,5 +27,5 @@ function solution(n,a,b)
 
 
 
-    return answer+1;
+    return answer+1; // 최초 경기 1회 추가
 }
