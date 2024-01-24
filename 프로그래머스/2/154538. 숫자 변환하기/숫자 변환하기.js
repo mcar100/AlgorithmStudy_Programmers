@@ -7,7 +7,6 @@
 
 
 function solution(x, y, n) {
-    var answer = [];
     const bfs = [{z:y,count:0}];
     const operand = [3,2,n];
     const operator = ['/','/','-'];
