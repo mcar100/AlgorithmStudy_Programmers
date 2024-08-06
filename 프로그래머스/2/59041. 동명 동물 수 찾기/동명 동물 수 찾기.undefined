@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT name, COUNT(*) AS Count 
+    FROM animal_ins
+    WHERE name IS NOT NULL
+    GROUP BY name
+    HAVING COUNT(*) >=2
+    ORDER BY name;
+
+# SELECT * FROM animal_ins WHERE name = 'Lucy';
